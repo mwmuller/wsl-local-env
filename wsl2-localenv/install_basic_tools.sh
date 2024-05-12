@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo -E apt-get install dos2unix
+sudo dis2unix.exe install* docker/docker*
+
 sudo -E apt update && sudo -E apt upgrade -y && sudo -E apt autoremove -y
 
 sudo -E apt install -y \
