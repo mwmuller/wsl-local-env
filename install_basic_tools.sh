@@ -18,6 +18,10 @@ sudo -E apt install -y \
 	unzip \
 	dos2unix
 
-git clone https://github.com/mwmuller/petalinux_wsl.git
+PETA_DIR="/home/${localEnv:USER}/petalinux_wsl"
+
+if [[ ! -d "$PETA_DIR" ]]; then
+	git clone https://github.com/mwmuller/petalinux_wsl.git
+fi
 	
 bash docker/docker-native-install.sh
