@@ -27,6 +27,6 @@ Depending on the Distro you selected, the install scripts will fail. You may nee
 then to unix from dos.
 Use the following commands to do so:
 1) Run ```apt-get install dos2unix``` to download dos2unix
-2) Convert all scripts with ```dos2unix.ece install* docker/docker*``` This should convert all 6 scripts
+2) Convert all scripts with ```dos2unix.exe install* docker/docker*``` This should convert all 6 scripts
 3) Re-run the effected scripts.
 

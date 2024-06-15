@@ -18,10 +18,13 @@ sudo -E apt install -y \
 	unzip \
 	dos2unix
 
-PETA_DIR="/home/${localEnv:USER}/petalinux_wsl"
+PETA_DIR="/home/${USER}/petalinux_wsl"
 
 if [[ ! -d "$PETA_DIR" ]]; then
+	echo "Cloning petalinux_wsl repo"
 	git clone https://github.com/mwmuller/petalinux_wsl.git
+else
+	echo "Petalinux_wsl repo already exists. Skipping..."
 fi
 	
 bash docker/docker-native-install.sh
