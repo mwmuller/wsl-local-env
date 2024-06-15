@@ -17,3 +17,4 @@ apt install -y docker-compose-plugin
 
 docker compose version
 docker --version
+sudo usermod -aG docker $USER

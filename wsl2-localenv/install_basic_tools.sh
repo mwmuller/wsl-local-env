@@ -17,5 +17,7 @@ sudo -E apt install -y \
 	nano \
 	unzip \
 	dos2unix
+
+git clone https://github.com/mwmuller/petalinux_wsl.git
 	
 bash docker/docker-native-install.sh
