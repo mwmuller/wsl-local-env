@@ -28,3 +28,5 @@ else
 fi
 	
 bash docker/docker-native-install.sh
+
+start "https://account.amd.com/en/forms/downloads/xef.html?filename=petalinux-v2019.2-final-installer.run"
