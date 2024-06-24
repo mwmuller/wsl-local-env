@@ -9,7 +9,7 @@
 copy it to the ```\\wsl.localhost\Ubuntu\home\<username\>\petalinux_wsl``` directory, which is in your wsl environment. 
 
 #### WSL Distro
-1) Select the desired distro for WSL (ubuntu is used for this petalinux version)
+1) The selected distro for petalinux will be ubuntu
 2) Restart machine to have wsl feature enabled and finalize distro install
     - Look for the ```"Linux"``` -> ```Ubuntu``` folder in your file explorer
 
