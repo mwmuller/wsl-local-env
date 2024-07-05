@@ -15,14 +15,12 @@ copy it to the ```\\wsl.localhost\Ubuntu\home\<username\>\petalinux_wsl``` direc
 
 ### Installing Basic Tools and Clone Repo
 1) Open the ```Ubuntu``` app as admin (you should see ```username@DESKTOP-XXXXXXX:~$```)
-    #### Petalinux Repo
+2) navigate to the wsl-localenv folder -> ```cd /mnt/<drive>/<path_to_folder>```
+2) run ```sudo ./install_basic_tools.sh``` to install docker image/docker and needed tools for wsl
+#### Petalinux Repo
     - The repo should be clone via the ```install_basic_tools.sh``` script, however if it fails:
     - run: ```git clone https://github.com/mwmuller/petalinux_wsl.git```
-
-### Installing basic tools
-1) navigate to the wsl-localenv folder -> ```cd /mnt/<drive>/<path_to_folder>```
-2) run ```sudo ./install_basic_tools.sh``` to install docker image/docker and needed tools for wsl
-
+    
 ### Check Docker
 To ensure docker was installed correctly, run ```sudo docker run hello-world```.
 You should receive ```Hello from Docker!```
@@ -47,3 +45,14 @@ Use the following commands to do so:
 ### WSL shutdown
 If you're environment ever complains of locked resources or processes you can run ```wsl --shutdown```
 from Git bash on your main machine to kill the instance. It should start up automatically afterwards.
+
+### WSL Shrink
+- If you notice your drive is getting low on space this process may help reduce the virtual drive space
+1) Open ```git bash``` as admin and shutdown wsl: ```wsl --shutdown```
+2) Then run ```diskpart```
+3) ```select vdisk file="C:\Users\**user**\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu...\LocalState\ext4.vhdx"```
+- This will ask you to select the ```ext4.vhdx``` file of the subsystem found:
+> - ```"C:\Users\valorin\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu...\LocalState\ext4.vhdx"```
+
+## Note
+If this script fails, out-of-date/system mismatch, the instructions can be found here: https://stephenreescarter.net/how-to-shrink-a-wsl2-virtual-disk/
