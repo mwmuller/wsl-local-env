@@ -3,7 +3,7 @@
 1) Ensure hyper V is enabled for your PC via the BIOS (Depending on your CPU manufacturer, this can be achieved by run running the next command)
 
 #### Petalinux Installer and WSL
-2) open git bash as admin and run the ```wsl-localenv/install-enable-wsl-getptlnx.sh```
+2) open git bash as admin and run the ```wsl-localenv/install-enable-wsl-get-ptlnx.sh```
 3) The URL for downloading petalinux should popup while the distro is installing.
 4) Once you've downloaded the installer ```petalinux-v2019.2-final-installer.run```<br />
 copy it to the ```\\wsl.localhost\Ubuntu\home\<username\>\petalinux_wsl``` directory, which is in your wsl environment. 
