@@ -21,16 +21,9 @@ set -euxo pipefail
 # Prompt user to select drive
 #selected_drive=$(select_drive)
 
-powershell.exe -c "wsl --install"
+powershell.exe -c "start https://account.amd.com/en/forms/downloads/xef.html?filename=petalinux-v2019.2-final-installer.run"
 
 powershell.exe -c "Enable-WindowsOptionalFeature -FeatureName 'Microsoft-Windows-Subsystem-Linux' -All -Online -norestart"
 
 powershell.exe -c "Enable-WindowsOptionalFeature -FeatureName 'VirtualMachinePlatform' -All -Online -norestart"
 
-powershell.exe -c "start https://account.amd.com/en/forms/downloads/xef.html?filename=petalinux-v2019.2-final-installer.run"
-
-# Prints the available distro for WSL2 (Defaults)
-wsl.exe --list --online
-
-# Maybe add functionality for custom distro input
-wsl.exe --install ubuntu
