@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euxo pipefaile
+set -euxo pipefail
 
 currentUser=$(whoami)
 
@@ -9,7 +9,7 @@ sudo bash -c "echo \"$currentUser ALL=(ALL) NOPASSWD: /usr/sbin/service docker s
 sudo bash -c "echo \"$currentUser ALL=(ALL) NOPASSWD: /usr/sbin/service docker stop\" >> /etc/sudoers"
 sudo bash -c "echo \"$currentUser ALL=(ALL) NOPASSWD: /usr/sbin/service docker restart\" >> /etc/sudoers"
 
-sudo visudo -cp
+sudo visudo -c
 sudo usermod -aG docker $currentUser
 
 newgrp docker
